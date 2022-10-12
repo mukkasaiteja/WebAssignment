@@ -1,1 +1,32 @@
 /* start your css here */
+body{
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTluoE5jrK1E1XfdY8gjoWu69UqwDvrd8afSw&usqp=CAU");
+}
+.container{
+    padding: 10px;
+    border: 1px solid brown;
+    background-color:burlywood;
+    text-align: center;
+    margin-left: 500px;
+    margin-right: 500px;
+    border-bottom: 6px solid brown;
+}
+.main{
+    
+     border-bottom: 6px solid brown;
+}
+.coffee{
+    display: flex;
+    justify-content: space-between;
+}
+ul{
+    list-style-type: none;
+}
+.coffeenames{
+align-content: center;
+}
+#class{
+    display: flex;
+    justify-content: space-between;
+}
+

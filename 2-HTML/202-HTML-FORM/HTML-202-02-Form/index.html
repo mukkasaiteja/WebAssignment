@@ -4,9 +4,46 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>form</title>
+    <style>
+      form{
+        border: 1px solid black;
+        padding: 20px;
+      }
+      input{
+       margin: 10px;
+      }
+      b{
+        margin-bottom: 10px;
+      }
+    </style>
   </head>
   <body>
-    Start coding here
+    <h3>Personal Details</h3>
+   <form action="normal">
+    <label><b>salutation</b></label><br />
+    <select>
+      
+      <option value="none">none</option>
+      <option>how are you?</option>
+      <option> how are u going?</option>
+    </select><br />
+    <label for="fisrt name">First Name :</label>
+    <input type="text"> <br />
+    <label for="Last name">Last Name :</label>
+    <input type="text"> <br />
+    <label for="gender">Gender</label>
+    <input type="radio" name="gender"><label>male</label>
+    <input type="radio" name="gender" ><label>female</label><br />
+    <label for="Email">Email:</label>
+    <input type="email" name="email" ><br />
+    <label for="date of birth">Date Of Birth :</label>
+    <input type="date" name="" id=""><br />
+    <label for="adders">Address:</label><br />
+    <textarea name="" id="" cols="30" rows="10"></textarea><br />
+    <button>sumbit</button>
+
+
+   </form>
   </body>
 </html>
