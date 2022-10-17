@@ -1,1 +1,33 @@
 /* start your css here */
+.form{
+    background-color: black;
+    opacity: 0.5px;
+    color: aliceblue;
+    margin-right: 1100px;
+
+}
+a{
+    color: aliceblue;
+}
+h2{
+    margin: 10px;
+    padding: 5px;
+}
+
+.input{
+    margin: 15px;
+    padding: 10px;
+    width: 70%;
+}
+button{
+    background-color: black;text-align: center;
+    color: aliceblue;
+    border: 2px solid whitesmoke;
+   margin: 10px;
+   margin-left: 100px;
+   padding: 10px;
+   width: 50%;
+}
+.in{
+    margin: 10px;
+}

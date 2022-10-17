@@ -1,1 +1,43 @@
 /* start your css here */
+body{
+    background-color: black;
+}
+.conitaner{
+    margin: 40px;
+    background-color: aliceblue;
+    border: 1px solid white;
+    height: 1000px;
+}
+.second{
+    margin: 40px;
+    background-color:brown;
+    border: 1px solid brown;
+    height: 900px;
+}
+.fistclass{
+    margin: 10px;
+    margin-left: 50px;
+    margin-right: 50px;
+    background-color: salmon;
+    border: 1px solid brown;
+    padding: 100px;
+    border-radius: 10px;
+}
+.secondclass{
+    margin: 10px;
+    background-color:rgb(49, 19, 19);
+    border: 1px solid brown;
+    padding: 100px;
+    border-radius: 10px;
+}
+.thridclass{
+    margin: 10px;
+    background-color:red;
+    border: 1px solid brown;
+    padding: 100px;
+   border-bottom-right-radius: 80px;
+   border-bottom-left-radius: 20px;
+   border-top-left-radius: 10px;
+   border-top-right-radius: 40px;
+}
+

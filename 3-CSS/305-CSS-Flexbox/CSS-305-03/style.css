@@ -1,1 +1,8 @@
 /* start your styling here  */
+img{
+    height: 60px;
+    width: 60px;
+}
+.section-1{
+    background-color: orange;
+}

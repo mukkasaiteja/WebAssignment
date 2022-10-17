@@ -1,1 +1,48 @@
-/* start your styling here  */
+body{
+    background-color: blue;
+}
+.main{
+    background-color: red;
+    margin-right: 800px;
+   
+}
+.main-1{
+
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 1px 2px 2px black;
+    
+}
+.bt{
+    padding: 20px;
+    margin: 10px;
+    width: 90px;
+    background-color:#000080;
+    color: gray;
+    margin-right: 4px;
+    box-shadow: 1px 2px 2px black;
+    border-radius: 20px;
+}
+input{
+    padding: 35px;
+    margin: 10px;
+   width :400px;
+background-color: gainsboro;
+box-shadow: 1px 2px 2px black;
+border-radius: 10px;
+
+   
+}
+.main-2{
+    display: flex;
+    justify-content: space-around;
+}
+.yellow{
+    background-color: yellow;
+}
+.blue{
+    background-color: blue;
+}
+#bt1{
+    margin-left: 50px;
+}

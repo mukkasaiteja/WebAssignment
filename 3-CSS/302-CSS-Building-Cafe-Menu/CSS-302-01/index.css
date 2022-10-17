@@ -10,6 +10,7 @@ body{
     margin-left: 500px;
     margin-right: 500px;
     border-bottom: 6px solid brown;
+    
 }
 .main{
     
@@ -30,8 +31,9 @@ align-content: center;
     justify-content: space-between;
     border-bottom: 6px solid brown;
 }
-a{
+.h4{
     color: black;
     border-bottom: 1px solid black;
+
 }
 

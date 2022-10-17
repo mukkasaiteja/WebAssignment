@@ -1,1 +1,26 @@
 /* start your styling here  */
+nav{
+    background-color: black;
+    color: aliceblue;
+    padding: 20px;
+    text-align: center;
+}
+main{
+    background-color: antiquewhite;
+}
+img{
+    height: 200px;
+    width: 200px;
+}
+.section-1{
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 5px;
+}
+.section-2{
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 5px;
+}
