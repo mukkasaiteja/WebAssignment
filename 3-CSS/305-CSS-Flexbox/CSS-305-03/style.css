@@ -1,8 +1,50 @@
 /* start your styling here  */
-img{
-    height: 60px;
-    width: 60px;
-}
 .section-1{
+    
     background-color: orange;
+
 }
+i{
+    height: 20px;
+}
+
+.section-2{
+    
+    background-color: greenyellow;
+
+}
+.section-3{
+  
+    background-color: green;
+
+}
+main{
+    display: flex;
+}
+.b1{
+   background-color: white;
+   color: orange;
+   border: 1px solid orange;
+   padding: 20px;
+  border-radius: 40px;
+  margin: 5px;
+}
+.b2{
+    background-color: white;
+    color: greenyellow;
+    border: 1px solid greenyellow;
+    padding: 20px;
+   border-radius: 40px;
+   margin: 5px;
+ }
+ .b3{
+    background-color: white;
+    color: green;
+    border: 1px solid green;
+    padding: 20px;
+   border-radius: 40px;
+   margin: 5px;
+ }
+ h1,p{
+    color: whitesmoke;
+ }
