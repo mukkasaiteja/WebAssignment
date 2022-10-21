@@ -1,4 +1,9 @@
 /* start your css here */
 img{
-    display: inline;
+    
+    box-shadow: 5px 5px 5px black;
+}
+.h6{
+   
+    box-shadow: 5px 5px 5px black;
 }

@@ -1,1 +1,54 @@
-/* start your styling here  */
+.main{
+    height: 300px;
+    width: 400px;
+    padding: 20px;
+    margin: 20px;
+    border: 1px solid black;
+    border-radius: 20px;
+    background-color: black;
+}
+.section-1{
+    display: grid ;
+    grid-template-columns: 90% 10%;
+    gap: 3px;
+
+}
+.section-2{
+    margin-top: 10px;
+    display: grid ;
+    grid-template-columns: 30% 30% 29% 10%;
+    gap: 3px;
+}
+.section-3{
+    margin-top: 10px;
+    display: grid ;
+    grid-template-columns: 30% 30% 29% 10%;
+    gap: 3px;
+}
+
+.section-4{
+    margin-top: 10px;
+    display: grid ;
+    grid-template-columns: 30% 30% 29% 10%;
+    gap: 3px;
+}
+.nothing{
+    margin-top: 10px;
+    display: grid ;
+    grid-template-columns: 30% 30% 29% 10%;
+    gap: 3px;
+}
+button{
+    padding: 10px;
+ background-color: rgb(145, 34, 210);
+ border-radius: 10px;
+}
+input{
+    border-radius: 10px;
+    background-color: azure;
+}
+.blue{
+    background-color: violet;
+}
+
+

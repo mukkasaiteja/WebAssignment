@@ -1,7 +1,51 @@
-/* start your css here */
-.main{
-    border: 1px solid black;
-    padding: 10px;
 
+
+h1{
+    text-align: center;
+    font-size: 50px;
+  }
+  .container{
+    margin: 100px auto;
+    width: 600px;
+    height: 600px;
+  
+  }
+  .main{
+background-color: rgb(255, 255, 255);
+padding: 10px  ;
+margin: 50px auto;
 }
 
+.mark{
+background: linear-gradient(rgb(122, 74, 14), rgb(245, 62, 113), rgb(162, 27, 27));
+box-shadow: 0 0 20px 0 rgb(83 14 14 / 80%);
+width: 200px;
+height: 25px;
+margin: 10px auto;
+}
+.div1 {
+width: 60px;
+height: 25px;
+display: inline-block;
+}
+.div2{
+width: 110px;
+height: 25px;
+background-color: rgba(255, 255, 255, 0.5);
+border-left: 10px double rgba(0, 0, 0, 0.75);
+display: inline-block;
+}
+.marker{
+background: linear-gradient(#55680D, #71F53E, #116C31);
+box-shadow: 0 0 20px 0 #3b7e20cc;
+width: 200px;
+height: 25px;
+margin: 10px auto;
+}
+.markers{
+background: linear-gradient(hsl(186, 76%, 16%), hsl(223, 90%, 60%), hsl(240, 56%, 42%));
+box-shadow: 0 0 20px 0 hsl(223deg 59% 31% / 80%);
+width: 200px;
+height: 25px;
+margin: 10px auto;
+}
