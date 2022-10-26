@@ -2,24 +2,39 @@
 .section-1{
     
     background-color: orange;
+    
+    border-radius:20px 0px 0px 20px;
+    width: 1600px;
+    height: 500px;
+   
 
 }
 i{
-    height: 20px;
+    height: 40px;
+    width: 40px;
+    
 }
 
 .section-2{
     
     background-color: greenyellow;
+    width: 1600px;
+    height: 500px;
 
 }
 .section-3{
   
     background-color: green;
+ 
+    border-radius:0px 20px 20px 0px;
+    width: 1600px;
+    height: 500px;
 
 }
 main{
     display: flex;
+    margin: 20px;
+  
 }
 .b1{
    background-color: white;
@@ -28,6 +43,7 @@ main{
    padding: 20px;
   border-radius: 40px;
   margin: 5px;
+  width: 200px;
 }
 .b2{
     background-color: white;
@@ -36,6 +52,7 @@ main{
     padding: 20px;
    border-radius: 40px;
    margin: 5px;
+   width: 200px;
  }
  .b3{
     background-color: white;
@@ -44,7 +61,21 @@ main{
     padding: 20px;
    border-radius: 40px;
    margin: 5px;
+   padding-bottom: 20px;
+   width: 200px;
+ 
  }
  h1,p{
     color: whitesmoke;
  }
+ h1{
+    padding-bottom: 40px;
+    padding-top: 100px;
+    margin-left: 20px;
+ }
+ p{
+    margin-left: 20px;
+   margin-right: 20px;
+ }
+
+ 

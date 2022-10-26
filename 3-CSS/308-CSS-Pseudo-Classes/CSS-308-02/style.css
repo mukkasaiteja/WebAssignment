@@ -1,1 +1,9 @@
 /* start your styling here  */
+select{
+    background-color: orange;
+    padding: 20px;
+    margin: 10px auto;
+}
+select:hover {
+    background-color: red;
+  }

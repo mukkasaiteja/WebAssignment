@@ -1,31 +1,52 @@
-/* start your styling here  */
-body{
-    margin: 0%;
-    padding: 0%;
-}
 nav{
-    color: whitesmoke;
-    background-color: rgba(35, 101, 194, 0.649);
     display: flex;
-    
-    
+    background-color: blue;
+    color: aliceblue;
+    justify-content: center;
 }
-.logo,.mt{
+li{
+    list-style-type: none;
+}
+ul{
+    display: flex;
     margin: 10px;
+    align-content: center;
+
 }
-.naviteams{
-    display: flex;
-}
-input{
-    width: 100%;
-    height: 40px;
-    margin-right: 400px;
+li{
+    margin-left: 80px;
+    margin-top: 20px;
 }
 button{
-    width: 80%;
-    height: 40px;
+    background-color: white;
+    border: 1px solid blue;
+    color: blue ;
+    width: 80px;
+    border-radius: 20px;
+
 }
 select{
-    width: 80%;
-    height: 40px;
+    background-color: blue;
+    color: aliceblue;
+  border: 1px solid blue;
+}
+input{
+    width: 400px;
+
+}
+#h{
+    color: gold;
+    text-transform: lowercase;
+}
+img{
+    height: 60px;
+    width: 60px;
+}
+main{
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+    margin-left: 50px;
+    margin-right: 50px;
+
 }
