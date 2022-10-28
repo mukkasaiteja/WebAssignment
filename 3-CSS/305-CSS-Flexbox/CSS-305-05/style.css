@@ -1,1 +1,141 @@
 /* start your styling here  */
+body{
+    padding: 0px;
+    margin: 0px;
+}
+main{
+    background-color: rgb(146, 220, 209);
+    height: 800px;
+    display: flex;
+   
+  
+}
+.id{
+    display: flex;
+}
+ul{
+    display: flex;
+    
+    
+}
+
+.profile{
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+}
+#img{
+    border-radius: 80%;
+    width: 200px;
+    padding: 5px;
+    /* margin-top:40px ; */
+ 
+   
+   
+}
+
+li{
+    list-style-type: none;
+    margin-left: 10px;
+}
+.ids{
+        margin-left: 40px;
+        font-size: 20px;
+        margin-top: 10px;
+}
+
+.nothing{
+    height: 30px;
+   width: 30px;
+}
+.first{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(184, 227, 239);
+  
+
+}
+.class{
+   text-align: center;
+}
+.message{
+    margin-left: 20px;
+    border: 1px solid yellowgreen;
+    background-color: rgb(40, 159, 149);
+    width: 150px;
+}
+.second{
+    display: flex;
+    flex-direction: column;
+    
+   
+   width: 70%;
+    
+}
+.active{
+    margin-left: 100px;
+    padding-left: 20px;
+    line-height: 0%;
+    color: gray;
+    font-size: 20px;
+    padding-top: 50px;
+   
+}
+p{
+    border: 2px solid rgb(184, 227, 239) ;
+    width: 250px;
+    height: 20px;
+    border-radius: 50px;
+    background-color: aliceblue;
+}
+.sectionfirst{
+    display:flex ;
+    border: 1px solid  rgb(184, 227, 239) ;
+    background-color: aliceblue;
+    width: 500px;
+    justify-content: center;
+margin-left: 300px;
+margin-top: 10px;
+justify-content: space-around;
+border-radius: 10px;
+box-shadow: 5px 3px 5px 2px black;
+margin-bottom: 50px;
+
+}
+.pic{
+    border-radius: 20px;
+    height: 70px;
+    margin-top: 10px;
+    width: 70px;
+}
+.para{
+    color: aqua;
+}
+.sectionthrid{
+    display:flex ;
+    border: 1px solid  rgb(184, 227, 239) ;
+    background-color: aliceblue;
+    width: 500px;
+    justify-content: center;
+margin-left: 300px;
+margin-top: 10px;
+justify-content: space-around;
+border-radius: 10px;
+box-shadow: 5px 3px 5px 2px black;
+}
+.sectionsecond{
+    display:flex ;
+    border: 1px solid  rgb(184, 227, 239) ;
+    background-color: aliceblue;
+    width: 500px;
+    justify-content: center;
+margin-left: 300px;
+margin-top: 10px;
+justify-content: space-around;
+border-radius: 10px;
+box-shadow: 5px 3px 5px 2px black;
+margin-bottom: 50px;
+}

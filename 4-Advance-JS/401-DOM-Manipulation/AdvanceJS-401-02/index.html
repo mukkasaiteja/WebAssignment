@@ -4,9 +4,46 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>image</title>
+    <style>
+      .div{
+        display: flex;
+        justify-content: center;
+         align-items: center;
+         flex-direction: column;
+         height: 600px;
+         border: 2px solid black;
+      }
+
+      h1{
+        color: green;
+        font-size: 30px;
+        font-weight: 800;
+
+      }
+      p{
+        font-weight: 800;
+      }
+    </style>
   </head>
   <body>
-    Start your code here
+    <div class="div">
+      <h1>Geekster</h1>
+    <p>click here to add image element</p>
+    <button onclick="showimg()">click</button>
+    <div id="image" style=" border: 1px solid black;"></div>
+    </div>
+    
+    <script>
+          function showimg(){
+    let divref = document.getElementById("image");
+    
+    divref.src = "https://mybigplunge.com/wp-content/uploads/2021/12/Geekster_logo.jpg";
+
+}
+
+
+
+    </script>
   </body>
 </html>

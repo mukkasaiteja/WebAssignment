@@ -1,1 +1,90 @@
 /* start your styling here  */
+nav{
+    display: flex;
+    justify-content: space-between;
+}
+.nav-iteams{
+    display: flex;
+    width: 50%;
+
+}
+.logo{
+       margin-left: 100px;
+}
+img{
+    height: 80px;
+    margin: 10px;
+}
+li{
+    list-style-type: none;
+    margin: 5px;
+}
+.fives{
+    display: flex;
+    margin-left: 20px;
+}
+#btone{
+    width: 100px;
+    padding: 10px;
+    margin-right: 10px;
+    border: 1px solid white;
+    background-color: aliceblue;
+    font-size: 20px;
+    border-radius: 20px;
+}
+#bttwo{
+    width: 100px;
+    padding: 10px;
+    background-color: white;
+    color: blue;
+    border: 1px solid blue;
+    font-size: 20px;
+    border-radius: 20px;
+}
+#fourth{
+    border-right:1px solid black ;
+    height: 60px;
+}
+.one{
+    width: 50%;
+    margin-left: 100px;
+    
+}
+#h1{
+    font-size: 70px;
+    color: brown;
+    font-weight: 50;
+}
+input{
+    padding: 15px;
+    margin-top: 10px;
+    width: 400px;
+}
+p{
+    
+    width: 400px;
+}
+button{
+    width: 350px;
+    text-align: center;
+    padding: 20px;
+    border-radius: 20px;
+    background-color: blue;
+   border: 1px solid blue;
+
+}
+#bt3{
+   margin-left: 10px ;
+   
+}
+a{
+    color: blue;
+}
+main{
+    display: flex;
+    
+}
+.pic{ 
+    width: 80%;
+    height: 600px;
+}

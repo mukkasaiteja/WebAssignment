@@ -4,9 +4,34 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>DOM</title>
+    <style>
+      body{
+      border: 3px solid black;
+   height: 600px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   border-radius: 10px;
+      }
+      input{
+        border: 3px solid green;
+      }
+    </style>
   </head>
   <body>
-    Start your code here
+    <input type="text" id="inputs">
+    <p id="wrote"></p>
+    <script>
+      const input=(e)=>{
+    const text=document.getElementById('wrote');
+    const value=(e.target.value);
+      text.innerHTML=value;
+}
+
+
+document.getElementById('inputs').addEventListener('input',input);
+    </script>
   </body>
 </html>
