@@ -1,7 +1,24 @@
 /* start your styling here  */
 main{
     display: grid;
-    background: linear-gradient(180deg,rgb(255,0,0),rgb(0,255,0),rgb(0,0,255));
-    border: 10px solid black;
-    padding: 100px;
+    grid-template-rows: repeat(4,100px);
+    grid-template-columns:repeat(4,300px);
+   
+    border: 2px solid black;
+    padding: 20px;
+}
+section{
+    padding: 20px;
+    width: 200px;
+    height: 50px;
+    display: grid;
+    border: 1px solid black;
+}
+.section-2{
+    grid-column: 2;
+    grid-row: 1/span 2;
+    border: 1 solid black;
+}
+.section-3{
+    grid-column: 1/span 2;
 }

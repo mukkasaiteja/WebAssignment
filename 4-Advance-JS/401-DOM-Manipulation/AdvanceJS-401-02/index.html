@@ -24,6 +24,11 @@
       p{
         font-weight: 800;
       }
+      #image{
+        width: 600px;
+        height: 200px;
+        border: 1px solid black;
+      }
     </style>
   </head>
   <body>
@@ -31,12 +36,12 @@
       <h1>Geekster</h1>
     <p>click here to add image element</p>
     <button onclick="showimg()">click</button>
-    <div id="image" style=" border: 1px solid black;"></div>
+    <img id="image">
     </div>
     
     <script>
           function showimg(){
-    let divref = document.getElementById("image");
+    var divref = document.getElementById("image");
     
     divref.src = "https://mybigplunge.com/wp-content/uploads/2021/12/Geekster_logo.jpg";
 
