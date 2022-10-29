@@ -1,54 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>image</title>
-    <style>
-      .div{
-        display: flex;
-        justify-content: center;
-         align-items: center;
-         flex-direction: column;
-         height: 600px;
-         border: 2px solid black;
-      }
-
-      h1{
-        color: green;
-        font-size: 30px;
-        font-weight: 800;
-
-      }
-      p{
-        font-weight: 800;
-      }
-      #image{
-        width: 600px;
-        height: 200px;
-        border: 1px solid black;
-      }
-    </style>
-  </head>
-  <body>
-    <div class="div">
-      <h1>Geekster</h1>
-    <p>click here to add image element</p>
-    <button onclick="showimg()">click</button>
-    <img id="image">
-    </div>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>child-class</title>
+  <style>.container{
+    display: flex;
+    flex-direction: column;
+  height: 50px;
+  width: 200px;
+  border:2px solid black;
+  margin: 5px;
+  justify-content: center;
+  align-items: center;
+}
+.main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 3px solid black;
+    border-radius: 20px;
     
-    <script>
-          function showimg(){
-    var divref = document.getElementById("image");
-    
-    divref.src = "https://mybigplunge.com/wp-content/uploads/2021/12/Geekster_logo.jpg";
-
+}</style>
+</head>
+<body>
+  <div class="main">
+    <div class="container">1st child</div>
+    <div class="container">2nd child</div>
+    <div class="container">3rd child</div>
+    <div class="container">4th child</div>
+    <div class="container">5th child</div>
+    <div class="container">6th child</div>
+    <div class="container">7th child</div>
+    <div class="container">8th child</div>
+    <div class="container">9th child</div>
+    <div class="container">10th child</div>
+    <div class="container">11th child</div>
+    <div class="container">12th child</div>
+    <div class="container">13th child</div>
+    <div class="container">14th child</div>
+    <div class="container">15th child</div>
+    <div class="container">16th child</div>
+    <div class="container">17th child</div>
+     </div>
+     <script>
+      var id=document.getElementsByClassName('container');
+for(let i=0;i<id.length;i++){
+    if(i==0){
+        id[i].style.backgroundColor="blue";
+    }
+   else if (i==8){
+    id[i].style.backgroundColor="green"
+   }
+   else if(i==16){
+    id[i].style.backgroundColor = "palevioletred";
+   }
+   else if(i%2==1){
+    id[i].style.backgroundColor="lime"
+   }
+   else {
+    id[i].style.backgroundColor = "white";
+  }
 }
 
+     </script>
 
-
-    </script>
-  </body>
+</body>
 </html>

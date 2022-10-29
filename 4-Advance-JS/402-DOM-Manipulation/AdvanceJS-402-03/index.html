@@ -7,6 +7,27 @@
     <title>Shopping List</title>
   </head>
   <body>
-    Start your code here
+   <div>
+
+  <form >
+    <label for="">Enter a new item :</label>
+    <input type="text" id="todo">
+    <button>Add item</button>
+  </form>
+  <ul id="ul" onclick="shopping()"></ul>
+   </div>
+   <script>
+    
+    function shopping() {
+    
+      var list=document.getElementById("ul");
+      var value=document.getElementById("todo").value;
+      var li=document.getElementById("LI");
+      var textnode=document.createTextNode(value);
+      li.appendChild(textnode);
+      list.appendChild(li);
+      
+    }
+   </script>
   </body>
 </html>
