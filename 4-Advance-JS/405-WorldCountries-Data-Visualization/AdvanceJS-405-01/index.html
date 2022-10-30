@@ -4,9 +4,165 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>world data</title>
+    <style>
+      main{
+        text-align: center;
+      }
+      .tablediv{
+    display: flex;
+    background-color:orange;
+    height: 50px;
+    width: 91%;
+}
+table{
+    width: 500px;
+    border:2px solid; 
+    width: 100%;
+    text-align: center;
+}
+.middletd{
+    /* border:2px solid; */
+    width:300px;
+}
+.header{
+  
+}
+h2{
+  color: orange;
+  font-size: 50px;
+  font-weight: bold;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+    </style>
   </head>
   <body>
-    Start your code here
+    <header id="coutries">
+      <center><h2>
+      World Coutries Data
+  </h2></center>
+  <center><h5>
+      Currently,we have 250 coutries
+  </h5></center>
+  </header>
+   <main>
+      <div class="wrapper">
+          <div class="graph-buttons">
+              <button class="population" onclick="showpop()">
+               Population
+              </button>
+              <button class="languages" onclick="showlang()">languages</button>
+          </div>
+          <h4 class="graph-title"></h4>
+          <div class="graph">
+           <div class="graph-wrapper" id="stat"></div>
+          </div>
+      </div>
+   </main>
+   <table id="tableid">
+   
+   </table>
+   <table id="populationtable">
+      <tr>
+          <td>
+              world Population
+          </td>
+          <td>
+              <div class="tablediv" style='width:100%'></div>
+          </td>
+          <td>
+              7693165599
+          </td>
+      </tr>
+      
+   </table>
+  <script src="countries_data.js"></script>
+  <script>
+    function compare(a, b) {
+  if (a.population > b.population) {
+    return -1;
+  }
+  if (a.population < b.population) {
+    return 1;
+  }
+  return 0;
+}
+countries_data.sort(compare);
+let countries = {
+}
+let sortable = [];
+function lang(){
+    
+         countries_data.map((value) => {
+         value.languages.map((language) => {
+          if (countries[language] != undefined) {
+            countries[language] = countries[language] + 1;
+          } else {
+            countries[language] = 1;
+          }
+        });
+
+      });
+      for (var l in countries) {
+        sortable.push([l, countries[l]]);
+      }
+
+      sortable.sort(function (a, b) {
+        return b[1]-a[1];
+      });
+      
+}
+
+lang();
+
+function myFunction() {
+  var table = document.getElementById("tableid");
+  sortable.map((value,ind)=>{
+    table.insertRow(ind)
+     let row=table.insertRow(ind)
+     var cell1 = row.insertCell(0);
+     var cell2 = row.insertCell(1);
+     cell2.classList.add("middletd");
+     var cell3 = row.insertCell(2);
+     cell1.innerHTML = value[0];
+      cell2.innerHTML =
+        `<div class='tablediv' style='width:${value[1]}%'> </div>`;
+
+     cell3.innerHTML = value[1];
+    
+  });
+}
+ myFunction();
+
+let worldpopulation = 7693165599;
+var populationtable = document.getElementById("populationtable");
+ function table_population(){
+   countries_data.map((value,ind)=>{
+    let row=populationtable.insertRow(ind+1);
+    var cell1=row.insertCell(0);
+    var cell2=row.insertCell(1);
+    cell2.classList.add('middletd');
+    var cell3=row.insertCell(2);
+    cell1.innerHTML=value.name;
+   let percent=(value.population/worldpopulation)*100;
+   cell2.innerHTML=`<div class="tablediv" style='width:${percent}%'></div>`;
+   cell3.innerHTML=value.population;
+   })
+ }
+ table_population();
+
+ document.getElementById("populationtable").style.display='none';
+  document.getElementById("tableid").style.display = "none";
+
+  function showpop(){
+      document.getElementById("tableid").style.display = "none";
+      document.getElementById("populationtable").style.display = "block";
+    
+  }
+  function showlang() {
+    document.getElementById("populationtable").style.display = "none";
+    document.getElementById("tableid").style.display = "block";
+  }
+  </script>
   </body>
 </html>

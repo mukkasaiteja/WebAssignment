@@ -4,9 +4,50 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>keyboard</title>
+    <style>
+      .container{
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
+         align-items: center;
+       background-color: aquamarine;
+        border: 1px solid black;
+        height: 400px;
+      }
+      p{
+        width: 100px;
+        border: 1px solid black;
+        padding: 20px;
+        text-align: center;
+        box-shadow: 1px 1px 1px 1px green;
+        background-color: aliceblue;
+      }
+      
+      
+    </style>
   </head>
   <body>
-    Start your code here
+    <div class="container">
+     <div> <input type="text" class="keyboard"></div>
+        <div id="keycode">
+   
+         <p id="ans">YOU pressed key </p>
+       </div>
+       <div id="keyboard">
+    
+       <p id="key-text"></p>
+       </div>
+   </div>
+   <script>
+    const keyBoard = document.querySelector(".keyboard");
+
+keyBoard.addEventListener("keyup",(e)=>{
+   let key = document.getElementById("key-text");
+   let ans=document.getElementById('ans');
+     ans.innerHTML=e.keyCode;
+     key.innerHTML = e.key;
+});
+   </script>
   </body>
 </html>

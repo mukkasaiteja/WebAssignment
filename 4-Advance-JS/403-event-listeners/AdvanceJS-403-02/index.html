@@ -4,9 +4,163 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>DRUM🥁</title>
+    <style>
+      body{
+        background-color: gray;
+      }
+      button{
+    border:2px solid blue;
+    height: 6rem;
+    width: 5rem;
+}
+.set{
+   
+    height:43rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+    background-color: gray;
+}
+.drum{
+  margin-left: 20px ;
+}
+.w{
+  background-image: url("images/crash.png");
+  background-size: 100px 50px;
+  font-weight: 400;
+  font-size: 50px;
+  color: rgb(170, 51, 106);
+  box-shadow: 1px 1px 1px 1px black;
+  border: 5px solid gray;
+
+}
+.a{
+  background-image: url("images/tom3.png");
+  background-size: 100px 50px;
+  font-weight: 400;
+  font-size: 50px;
+  color: rgb(170, 51, 106);
+  box-shadow: 1px 1px 1px 1px black;
+  border: 5px solid gray;
+}
+.s{
+  background-image: url("images/tom1.png");
+  background-size: 100px 50px;
+  font-weight: 400;
+  font-size: 50px;
+  color: rgb(170, 51, 106);
+  box-shadow: 1px 1px 1px 1px black;
+  border: 5px solid gray;
+}
+.d{
+  background-image: url("images/tom2.png");
+  background-size: 100px 50px;
+  font-weight: 400;
+  font-size: 50px;
+  color: rgb(170, 51, 106);
+  box-shadow: 1px 1px 1px 1px black;
+  border: 5px solid gray;
+}
+.j{
+  
+  background-image: url("images/tom4.png");
+  background-size: 100px 50px;
+  font-weight: 400;
+  font-size: 50px;
+  color: rgb(170, 51, 106);
+  box-shadow: 1px 1px 1px 1px black;
+  border: 5px solid gray;
+
+  
+}
+.k{
+  
+  background-image: url("images/kick.png");
+  background-size: 100px 50px;
+  font-weight: 400;
+  font-size: 50px;
+  color: rgb(170, 51, 106);
+  box-shadow: 1px 1px 1px 1px black;
+  border: 5px solid gray;
+
+}
+.l{
+  
+  background-image: url("images/snare.png");
+  background-size: 100px 50px;
+  font-weight: 400;
+  font-size: 50px;
+  color: rgb(170, 51, 106);
+  box-shadow: 1px 1px 1px 1px black;
+  border: 5px solid gray;
+
+}
+h1{
+  font-size: 80px;
+}
+
+    </style>
   </head>
   <body>
-    Start your code here
+    <div>
+     <center> <h1>DRUM🥁 KIT</h1></center>
+    </div>
+    <div class="set">
+      <button class="w drum">w</button>
+      <button class="a drum">a</button>
+      <button class="s drum">s</button>
+      <button class="d drum">d</button>
+      <button class="j drum">j</button>
+      <button class="k drum">k</button>
+      <button class="l drum">l</button>
+     </div>
+     <script>
+      for(var i=0;i<document.querySelectorAll('.drum').length;i++){ 
+  document.getElementsByClassName('drum')[i].addEventListener('click',function(){
+    var buttontext=this.innerHTML;
+    console.log("key has been clicked");
+    // console.log(buttontext);
+    makesound(buttontext);
+  })
+}
+  document.addEventListener("keypress",function(e){
+    console.log("key has been pressed")
+    // console.log(e.key);
+    makesound(e.key);
+  })
+  function makesound(buttontext){
+    if(buttontext=='w'){
+        var tom1=new Audio("sounds/tom-1.mp3");
+        tom1.play();
+    }
+    if (buttontext == "a") {
+      var tom2 = new Audio("sounds/tom-2.mp3");
+      tom2.play();
+    }
+    if (buttontext == "s") {
+      var tom3 = new Audio("sounds/tom-3.mp3");
+      tom3.play();
+    }
+    if (buttontext == "d") {
+      var tom4 = new Audio("sounds/tom-4.mp3");
+      tom4.play();
+    }
+    if (buttontext == "j") {
+      var snare = new Audio("sounds/snare.mp3");
+      snare.play();
+    }
+    if (buttontext == "k") {
+      var kick = new Audio("sounds/kick-bass.mp3");
+      kick.play();
+    }
+    if (buttontext == "l") {
+      var crash = new Audio("sounds/crash.mp3");
+      crash.play();
+    }
+  }
+     </script>
+    
   </body>
 </html>
