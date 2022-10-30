@@ -4,31 +4,46 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Shopping List</title>
+    <title>Shopping</title>
+   
   </head>
   <body>
-   <div>
+    <div class="container">
+      <h1>My shopping list</h1>
+      <label for="things">Enter a new item: </label>
+      <input
+        type="text"
+        id="id"
+        class="things"
+        name="things"
+        placeholder="Enter the Things"
+      />
+      <button id="addItem">Add item</button>
+    </div>
 
-  <form >
-    <label for="">Enter a new item :</label>
-    <input type="text" id="todo">
-    <button>Add item</button>
-  </form>
-  <ul id="ul" onclick="shopping()"></ul>
-   </div>
-   <script>
+    <div >
+      <ul id="ul">
+       
+      </ul>
+    </div>
+  <script>
+    document.getElementById("addItem").addEventListener("click", getData);
+
+function getData() {
+  let inputref = document.getElementById("id");
+  let unOrList = document.getElementById("ul");
+  unOrList.innerHTML += ` <li>
+  ${inputref.value}
+  <button onclick="deleteData(this)">Delete</button>
+</li>`;
+  inputref.value = "";
+  inputref.focus();
+}
+
+function deleteData(e) {
+  e.parentElement.remove();
+}
+  </script>
     
-    // function shopping() {
-    
-    //   var list=document.getElementById("ul");
-    //   var value=document.getElementById("todo").value;
-    //   var li=document.getElementById("LI");
-    //   var textnode=document.createTextNode(value);
-    //   li.appendChild(textnode);
-    //   list.appendChild(li);
-      
-    // }
-    
-   </script>
   </body>
 </html>
