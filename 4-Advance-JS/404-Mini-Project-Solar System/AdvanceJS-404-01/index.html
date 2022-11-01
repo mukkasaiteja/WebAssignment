@@ -4,9 +4,199 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>solar systeam</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <style>
+      body {
+    background-image: url(ProjectImage/galaxy.gif);
+  }
+  .para-1 {
+    color: white;
+    font-size: 50px;
+    font-size: 40px;
+    font-weight: 900;
+    letter-spacing: 1px;
+    text-align: center;
+    -webkit-text-stroke: 1px cornflowerblue;
+  }
+  img {
+    width: 80%;
+  }
+  input {
+    outline: none;
+    height: 36px;
+    border-radius: 5px;
+  }
+  select {
+    height: 35px;
+    border-radius: 5px;
+    outline: none;
+  }
+  .btn-sec {
+    height: 37px;
+    background-color: gray;
+    color: white;
+    font-weight: 700;
+    border-radius: 5px;
+  }
+  .banner {
+    background-color: rgba(245, 245, 245, 0.144);
+  }
+  .bannerw {
+    background-color: rgba(245, 245, 245, 0.144);
+    justify-content: center;
+  }
+  #weight {
+    padding: 10px;
+    border-radius: 50%;
+    color: white;
+    background-color: rgba(245, 245, 245, 0.277);
+  }
+  .banner-in {
+    background-color: rgba(245, 245, 245, 0.159);
+    color: white;
+    font-size: 20px;
+  }
+  span {
+    font-weight: 800;
+  }
+  .waringstyle {
+    background-color: (0, 0, 0, 0.7);
+    color: white;
+    font-size: 40px;
+  }
+    </style>
   </head>
   <body>
-    Start your code here
+    <p class="para-1">Calculate a weight of an object on a planet</p>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-5 mx-auto mt-5">
+          <input type="number" placeholder="Mass in Kilogram" id="mass" />
+          <select name="" id="planetSelec" onchange="fn(event)">
+            <option value="selectPlanet" selected disabled>
+              --Select planet--
+            </option>
+            <option value="mercury">MERCURY</option>
+            <option value="venus">VENUS</option>
+            <option value="earth">EARTH</option>
+            <option value="moon">MOON</option>
+            <option value="mars">MARS</option>
+            <option value="jupiter">JUPITER</option>
+            <option value="saturn">SATURN</option>
+            <option value="uranus">URANUS</option>
+            <option value="neptune">NEPTUNE</option>
+            <option value="pluto">PLUTO</option>
+          </select>
+          <button class="btn-sec" onclick="calWeight()">
+            Calculate Weight
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="container" id="warningDiv">
+      <div class="row">
+        <div
+          class="col-md-10 bannerw mx-auto p-4 mt-5 d-flex align-items-center"
+        >
+          <h1 id="show-warning"></h1>
+        </div>
+      </div>
+    </div>
+    <div class="container" id="calculateSec">
+      <div class="row">
+        <div
+          class="col-md-10 banner mx-auto p-5 mt-5 d-flex align-items-center"
+        >
+          <div class="col-md-6">
+            <img src="" alt="" id="planetImage" />
+          </div>
+          <div class="col-md-6 banner-in p-5 text-center">
+            <p class="mb-4">
+              The weight of the object on <span id="planetName"></span>
+            </p>
+            <span class="p-4" id="weight"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+   <script>
+    document.getElementById("calculateSec").style.display = "none";
+document.getElementById("warningDiv").style.display = "none";
+
+let calWeight = () => {
+  var planetName = document.getElementById("planetName");
+  var planetImage = document.getElementById("planetImage");
+  var mass = document.getElementById("mass");
+  var weight = document.getElementById("weight");
+  var planetSelec = document.getElementById("planetSelec");
+  if (mass.value === "" || planetSelec.value === "selectPlanet") {
+    if (mass.value === "") {
+      let warning = document.getElementById("show-warning");
+      warning.innerText = "Mass is required";
+      document.getElementById("warningDiv").style.display = "block";
+      document.getElementById("calculateSec").style.display = "none";
+      warning.classList.add("waringstyle");
+      return;
+    } else if (planetSelec.value === "selectPlanet") {
+      alert("Please Select Planet");
+      return;
+    }
+  } else {
+    document.getElementById("warningDiv").style.display = "none";
+    document.getElementById("calculateSec").style.display = "block";
+    if (planetSelec.value === "mercury") {
+      planetName.innerText = "MERCURY";
+      planetImage.src = "ProjectImage/mercury.png";
+      weight.innerText = `${parseFloat(mass.value * 3.59).toFixed(2)} N`;
+    } else if (planetSelec.value === "venus") {
+      planetName.innerText = "VENUS";
+      planetImage.src = "ProjectImage/venus.png";
+      weight.innerText = `${parseFloat(mass.value * 8.87).toFixed(2)} N`;
+    } else if (planetSelec.value === "earth") {
+      planetName.innerText = "EARTH";
+      planetImage.src = "ProjectImage/earth.png";
+      weight.innerText = `${parseFloat(mass.value * 9.81).toFixed(2)} N`;
+    } else if (planetSelec.value === "moon") {
+      planetName.innerText = "MOON";
+      planetImage.src = "ProjectImage/moon.png";
+      weight.innerText = `${parseFloat(mass.value * 1.62).toFixed(2)} N`;
+    } else if (planetSelec.value === "mars") {
+      planetName.innerText = "MARS";
+      planetImage.src = "ProjectImage/mars.png";
+      weight.innerText = `${parseFloat(mass.value * 3.77).toFixed(2)} N`;
+    } else if (planetSelec.value === "jupiter") {
+      planetName.innerText = "JUPITER";
+      planetImage.src = "ProjectImage/jupiter.png";
+      weight.innerText = `${parseFloat(mass.value * 25.95).toFixed(2)} N`;
+    } else if (planetSelec.value === "saturn") {
+      planetName.innerText = "SATURN";
+      planetImage.src = "ProjectImage/saturn.png";
+      weight.innerText = `${parseFloat(mass.value * 11.08).toFixed(2)} N`;
+    } else if (planetSelec.value === "uranus") {
+      planetName.innerText = "URANUS";
+      planetImage.src = "ProjectImage/uranus.png";
+      weight.innerText = `${parseFloat(mass.value * 10.67).toFixed(2)} N`;
+    } else if (planetSelec.value === "neptune") {
+      planetName.innerText = "NEPTUNE";
+      planetImage.src = "ProjectImage/neptune.png";
+      weight.innerText = `${parseFloat(mass.value * 14.07).toFixed(2)} N`;
+    } else if (planetSelec.value === "pluto") {
+      planetName.innerText = "PLUTO";
+      planetImage.src = "ProjectImage/pluto.png";
+      weight.innerText = `${parseFloat(mass.value * 0.42).toFixed(2)} N`;
+    }
+    planetSelec.value = "selectPlanet";
+    mass.value = "";
+  }
+};
+   </script>
   </body>
 </html>
