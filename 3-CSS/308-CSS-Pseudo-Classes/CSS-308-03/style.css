@@ -1,1 +1,103 @@
 /* start your styling here  */
+body{
+    /* background-color: black; */
+    /* color: aliceblue; */
+    margin: 0px;
+    padding: 0%;
+    
+}
+.nav{
+    display: flex;
+    justify-content: space-between;
+    background-color:#F0E68C;
+    position: static;
+    box-shadow: 0px 0px 20px 0px black;
+}
+ul{
+    display: flex;
+ margin-right: 50px; ;
+}
+li{
+    list-style-type: none;
+    margin-right: 50px; 
+    font-size: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+select{
+    font-size: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border: none;
+    background-color:#F0E68C;
+    outline: none;
+    text-decoration: none;
+
+}
+ .li:hover{
+        border-top: 4px solid #3fb0ac  ;
+        color:#3fb0ac !important;
+    }
+ option{
+            background-color: white;
+            color: gray;
+            opacity: 0.3;
+            text-decoration: none;
+        }
+        main{
+            display: flex;
+        }
+.first{
+    width: 50%;
+    margin-left: 100px;
+    
+   
+}
+img{
+    height: 400px;
+    width: 400px;
+    margin: 50px;
+}
+.mid{
+    display: flex;
+    justify-content: center;
+}
+span{
+    margin: 20px;
+}
+i:hover{
+    /* background-color: aqua; */
+    color: #3fb0ac;
+}
+.first p{
+    margin: 30px;
+    line-height: 1.5;
+}
+.button{
+    background-color: gray;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+button{
+    padding: 10px;
+    width: 150px;
+    margin: 30px;
+    border-radius: 20px;
+}
+button:hover{
+    color: gray;
+}
+.first h1{
+    margin: 30px;
+    font-weight: 200;
+
+}
+footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(40, 63, 40);
+    color: white;
+}
+
