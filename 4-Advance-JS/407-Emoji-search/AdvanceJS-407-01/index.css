@@ -1,0 +1,28 @@
+:root{
+    --black:#000000;
+    --white:#FFFFFF;
+}
+body{
+    background-color:var(--black);
+    color:var(--white);
+}
+.container{
+    margin: 10px;
+}
+form{
+  border-bottom:0.5px solid white ;
+   padding: 20px;
+
+}
+table{
+    margin: 20px;
+    
+}
+input{
+    outline: none;
+}
+h1{
+    border-bottom: 5px solid white;
+    padding-bottom: 50px;
+    text-align: center;
+}

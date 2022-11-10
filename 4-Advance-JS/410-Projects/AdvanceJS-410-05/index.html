@@ -5,8 +5,105 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,600;1,300;1,400&display=swap');
+
+body {
+    background-color: #f5c6ba;
+}
+
+.container {
+    width: 600px;
+    height: 400px;
+    border: 2px solid rgb(247, 192, 192);
+    margin: 100px auto;
+    box-shadow: 9px 8px 12px 4px #ee532c;
+    border-radius: 14px;
+    background-color: #f3ac96;
+}
+
+h2 {
+    font-size: 35px;
+    font-size: 35px;
+    padding: 0px 32px;
+}
+
+h3 {
+    text-align: right;
+    margin: -21px 77px;
+    font-size: x-large;
+    font-family: 'Mulish', sans-serif;
+}
+
+hr {
+    margin: 31px 40px;
+    height: 2px;
+    background-color: black;
+}
+
+.last-item {
+    display: flex;
+    justify-content: space-around;
+}
+
+.img img {
+    margin: -8px -55px;
+}
+
+form button {
+    background: linear-gradient(45deg, #f3f0ef, #f0e1dd);
+    border: 2px solid black;
+    padding: 7px 17px;
+    margin: -8px -38px;
+    cursor: pointer;
+}
+    </style>
   </head>
   <body>
-    Start your code here
+    <div class="container">
+      <div id="get">
+      <h2 id="quote" > "Your First priority is your career then anythings ,,</h2><br>
+      <h3 id="author" >~ Thomas Edison</h3></div>
+      <hr>
+      <div class="last-item">
+        <div class="img">
+          <img src="https://cdn-icons-png.flaticon.com/512/124/124021.png" width="35px" alt="">
+        </div>
+        <form action="">
+          <button id="btn">Next quote</button>
+        </form>
+      </div>
+  
+     </div>
+     <script>
+      const form= document.querySelector("form");
+const  quote=document.querySelector("#quote");
+const author=document.querySelector("#author");
+const btn=document.querySelector("#btn");
+const get=document.querySelector("#get");
+
+
+
+const getQuote= async()=>{
+    const res=fetch("https://type.fit/api/quotes");
+    const data=await (await res).json();
+    const num=Math.floor(Math.random()*data.length);
+    const item=data[num];
+
+    const t=item.text;
+   
+    const a=item.author;
+    quote.innerText=`"${t},,`;
+    author.innerText=` ~ ${a}`;
+
+
+
+
+}
+btn.addEventListener("click",getQuote)
+
+
+    getQuote()
+     </script>
   </body>
 </html>

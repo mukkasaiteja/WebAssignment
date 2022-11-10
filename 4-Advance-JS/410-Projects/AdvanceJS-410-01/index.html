@@ -1,12 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+     <link rel="stylesheet" href="410-01.css">
     <title>Document</title>
-  </head>
-  <body>
-    Start your code here
-  </body>
+    <style>
+      #result{
+border: 2px solid black;
+
+}
+img{
+    height: 30%;
+    width: 20%;
+    border-radius: 50%;
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <br>
+        <h1>Let's stalk someone on Github</h1>
+        <form id="myForm">
+            <div class="form-group">
+                <input type="text" id="search" class="form-control">
+            </div>
+            <div class="form-group">
+                <br>
+              <button class="btn btn-dark">Go</button>
+            </div>
+        </form>
+        <div id="result">
+
+        </div>
+
+    </div>
+    <script>
+      const searchuser = (e) =>{
+   e.preventDefault();
+   var search = document.getElementById("search").value;
+//    document.getElementById('result')=
+fetch("https://api.github.com/users/" + search)
+  .then((result) => result.json(), function (err) {
+        console.log('err');
+      })
+  .then((data) => {
+    document.getElementById(
+      "result"
+    ).innerHTML = ` <a target="_blank" href="https://github.com/${search}"> <img src=${data.avatar_url} alt="No user found"/> <a/> `;
+  })
+  .catch(console.log("wrong"));
+}
+
+let form= document.getElementById("myForm");
+form.addEventListener('submit',searchuser);
+    </script>
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+</body>
 </html>

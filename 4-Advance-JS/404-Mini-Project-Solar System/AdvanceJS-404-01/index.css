@@ -1,0 +1,62 @@
+body {
+   background-image: url(ProjectImage/galaxy.gif);
+ }
+ .para-1 {
+   color: white;
+   font-size: 50px;
+   font-size: 40px;
+   font-weight: 900;
+   letter-spacing: 1px;
+   text-align: center;
+ }
+ #weight {
+   padding: 10px;
+   border-radius: 50%;
+   color: white;
+   background-color: rgba(29, 2, 2, 0.277);
+ }
+ .banner-in {
+   background-color: rgba(15, 1, 1, 0.159);
+   color: white;
+   font-size: 20px;
+ }
+ span {
+   font-weight: 800;
+ }
+ .waringstyle {
+   background-color: (0, 0, 0, 0.7);
+   color: white;
+   font-size: 40px;
+ }
+ img {
+   width: 80%;
+ }
+ input {
+   outline: none;
+   height: 36px;
+   border-radius: 5px;
+ }
+ select {
+   height: 35px;
+   border-radius: 5px;
+   outline: none;
+ }
+ .btn-sec {
+   height: 37px;
+   background-color: rgb(221, 17, 17);
+   color: white;
+   font-weight: 700;
+   border-radius: 5px;
+   height: 50%;
+ }
+ .banner {
+   background-color: rgba(245, 245, 245, 0.144);
+ }
+ .bannerw {
+   background-color: rgba(245, 245, 245, 0.144);
+   justify-content: center;
+ }
+ .containert{
+   width: 60%;
+   height: 800px;
+ }

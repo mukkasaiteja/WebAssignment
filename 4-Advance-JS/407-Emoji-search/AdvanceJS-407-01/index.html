@@ -5,8 +5,68 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="stylesheet" href="index.css">
   </head>
   <body>
-    Start your code here
+    <section class="container">
+      <h1>
+          Emoji 🔍 Application
+      </h1>
+      <form id="form">
+          <input type="text" placeholder="emoji search" id="search">
+          <input type="submit" value="search">
+      </form>
+      <table id="table">
+     
+          
+      </table>
+    </section>
+  <script src="EmojiList.js"></script>
+  <script >
+    const emo = (e) =>{
+    const value=e.target.value;
+    displaySearchResults(value);
+} 
+const displaySearchResults=(searchQuery="")=>{
+    const filter=emojiList.filter(e=>{
+        if(e.description.indexOf(searchQuery)!==-1){
+            return true;
+        }
+        if(e.aliases.some(elem=>elem.startsWith(searchQuery))){
+            return true;
+        }
+
+    })
+    const parent = document.getElementById("table");  
+    parent.innerHTML="";
+    filter.forEach((e)=>{
+       let row=document.createElement("tr");
+        let emoji=document.createElement("td");
+        emoji.style.padding="10px"
+         aliases=document.createElement("td");
+        aliases.style.borderBottom="0.1px solid gray";
+        aliases.style.width="500px"
+        aliases.style.padding="10px"
+       let desc=document.createElement("td");
+        emoji.innerHTML=e.emoji;
+        emoji.style.borderBottom="0.1px solid gray";
+        aliases.innerHTML=e.aliases.join(",");
+        desc.innerHTML=e.description;
+        desc.style.borderBottom="0.1px solid gray";
+        desc.style.padding="10px"
+        desc.style.width="100%"
+       row.appendChild(emoji);
+        row.appendChild(aliases);
+        row.appendChild(desc);
+        parent.appendChild(row);     
+  
+    })
+}
+
+
+document.getElementById("form").addEventListener("keypress",emo);
+
+displaySearchResults();
+  </script>
   </body>
 </html>

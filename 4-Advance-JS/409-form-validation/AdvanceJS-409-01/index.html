@@ -1,12 +1,164 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
-  <body>
-    Start your code here
-  </body>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    
+    <style>
+        
+        .container h2{
+            text-align: center;
+        }
+        span{
+            text-align: center;
+            padding-left: 70px;
+        }
+        input{
+            width: 60%;
+            height: 15%;
+            border-radius: 10px;
+            padding: 10px;
+            outline: none;
+        }
+        #confirmpassword{
+            display: none;
+        }
+        .container{
+            text-align: center;
+            background-color: violet;
+        }
+        span{
+            color: yellow;
+            font-weight: bolder;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Validating Web Forms</h2><br>
+        <form id="form">
+            <div id="firstname">
+                <h3>First Name</h3>
+                <input type="text" placeholder="Enter First Name" id="first" ><br>
+                <span id="one"></span>
+            </div><br>
+            <div id="lastname">
+                <h3>Last Name</h3>
+                <input type="text" placeholder="Enter Last Name" id="last"><br>
+                <span id="two"></span>
+            </div><br>
+            <div id="email">
+                <h3>Email</h3>
+                <input type="text" placeholder="Enter Email" id="mail"><br>
+                <span id="three" ></span>
+            </div><br>
+            <div id="password">
+                <h3>Password</h3>
+                <input type="password" placeholder="Enter Password" id="pass"><br>
+                <span id="four" ></span>
+            </div><br>
+            <div id="confirmpassword">
+                <h3>Confirm Password</h3>
+                <input type="password" placeholder="Confirm Password" id="cpw1" ><br>
+                <span id="span5"></span>
+            </div><br>
+            <div id="telephone">
+                <h3>Telephone</h3>
+                <input type="text" placeholder="Enter Phone number" id="phone-number"><br>
+                <span id="five" ></span>
+            </div><br>
+            <div id="bio">
+                <h3>Your Bio</h3>
+                <textarea name="" id="your-bio" placeholder="enter your bio" cols="100" rows="10"></textarea><br>
+                <span id="six" ></span>
+            </div><br>
+            <button id="button" class=" btn btn-primary mb-3">Submit</button>
+        </form>
+    </div>
+    <script>
+        function fn(e){
+            e.preventDefault();
+            var firstname=document.getElementById("first").value;
+            var lastname=document.getElementById("last").value;
+            var email=document.getElementById("mail").value;
+            var password=document.getElementById("pass").value;
+            
+            var phone=document.getElementById("phone-number").value;
+            var bio=document.getElementById("your-bio").value;
+
+            var firstname_check=/^[A-Za-z0-9. ]{3,16}$/;
+            var lastname_check=/^[A-Za-z0-9. ]{3,16}$/;
+            var email_check=/^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$/;
+            var password_check=/^(?=.d)(?=.[a-zA-Z]).{6,20}$/;
+            var phone_check=/^(?:(?:\+|0{0,2})91(\s*[\ -]\s*)?|[0]?)?[789]\d{9}|(\d[ -]?){10}\d$/;
+            var bio_check=/^[A-Za-z0-9. ]{10,}$/;
+
+            if(firstname_check.test(firstname)){
+                document.getElementById("one").innerText="correct way";
+                document.getElementById("one").style.color="green";
+                document.getElementById("one").style.backgroundColor="black";
+                document.getElementById("first").style.border="2px solid green";
+            }
+            else{
+                document.getElementById("one").innerText="First name must be alphanumeric and contain 3-16 characters";
+                document.getElementById("one").style.backgroundColor="black";
+                
+                document.getElementById("first").style.border="2px solid yellow";
+            }
+            if(lastname_check.test(lastname)){
+                document.getElementById("two").innerText="correct way";
+                document.getElementById("last").style.border=" 2px solid green";
+            }
+            else{
+                document.getElementById("two").innerText="Last name must be alphanumeric and contain 3-16 characters";
+                document.getElementById("last").style.border="2px solid yellow";
+                document.getElementById("two").style.backgroundColor="black";
+            }
+            if(email_check.test(email)){
+                document.getElementById("three").innerText="correct way";
+                document.getElementById("mail").style.border="2px solid yellow";
+            }
+            else{
+                document.getElementById("three").innerText="Email must be a valid address, e.g. example@example.com";
+                document.getElementById("mail").style.border="2px solid yellow";
+                document.getElementById("three").style.backgroundColor="black";
+                
+            }
+            if(password_check.test(password)){
+                document.getElementById("four").innerText="correct way";
+                document.getElementById("pass").style.border="2px solid green";
+            }
+            else{
+                document.getElementById("four").innerText="Password must be alphanumeric (@,_ and - are also allowed) and between 6-20 characters";
+                document.getElementById("pass").style.border="2px solid yellow";
+                document.getElementById("four").style.backgroundColor="black";
+            }
+        
+            if(phone_check.test(phone)){
+                document.getElementById("five").innerText="correct way";
+                document.getElementById("phone-number").style.border="2px solid green";
+            }
+            else{
+                document.getElementById("five").innerText="A valid telephone number(11 digits and 333-333-3334)";
+                document.getElementById("phone-number").style.border="5px solid yellow";
+                document.getElementById("five").style.backgroundColor="black";
+            }
+            if(bio_check.test(bio)){
+                document.getElementById("six").innerText="";
+                document.getElementById("your-bio").style.border="5px solid green";
+            }
+            else{
+                document.getElementById("six").innerText=" Your Bio must be alphanumeric and contain more than 10 characters";
+                document.getElementById("your-bio").style.border="2px solid yellow";
+                document.getElementById("six").style.backgroundColor="black";
+            }
+
+        }
+        document.getElementById("form").addEventListener("keyup", fn);
+    </script>
+    
+</body>
 </html>
